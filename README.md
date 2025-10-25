@@ -14,7 +14,7 @@ The PEM (Privacy-Enhanced Mail) certificate is then saved as 'X.509_Cert.crt' in
 
 After initializing a TCP handshake between client and server, a TLS handshake begins with the client requesting which cipher suit and TLS version it can use, then the server responds with the answers and the server’s public key.
 
-The digital signature creation process will be conducted using a public-key system called RSA which creates two large prime numbers for the process. The client will encrypt the server’s public key it received with its own RSA session key to send back to the server. The server will decrypt the data using its own private key to uncover the session key for further data transmission.
+The digital signature creation process will be conducted using a public-key system called RSA which creates two large prime numbers for the process. The client will encrypt its own RSA session key using the server's public key to send back to the server. The server will decrypt the data using its own private key to uncover the session key for further data transmission.
 
 ### Dependencies
 
